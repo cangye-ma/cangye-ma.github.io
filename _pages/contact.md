@@ -1,9 +1,9 @@
 ---
 title: Contact
-author: Tao He
-date: 2022-02-05
+author: Cangya Ma
+date: 2023-04-21
 category: Jekyll
 layout: post
 ---
 
-This is an contact page.
+Email: youngy16@163.com
