@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jinming Hu">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="This is the website for the course Machine Learning in Practice Crash Course.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://conanhujinming.github.io/post/ml_in_practice_crash_course/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://conanhujinming.github.io/post/ml_in_practice_crash_course/">
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Jinming Hu">
+  <meta property="og:url" content="https://conanhujinming.github.io/post/ml_in_practice_crash_course/">
+  <meta property="og:title" content="Machine Learning in Practice Crash Course | Jinming Hu">
+  <meta property="og:description" content="This is the website for the course Machine Learning in Practice Crash Course."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-04-19T21:36:51&#43;08:00">
+    
+    <meta property="article:modified_time" content="2020-04-19T21:36:51&#43;08:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://conanhujinming.github.io/post/ml_in_practice_crash_course/"
+  },
+  "headline": "Machine Learning in Practice Crash Course",
+  
+  "datePublished": "2020-04-19T21:36:51+08:00",
+  "dateModified": "2020-04-19T21:36:51+08:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Jinming Hu"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jinming Hu",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://conanhujinming.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "This is the website for the course Machine Learning in Practice Crash Course."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Machine Learning in Practice Crash Course | Jinming Hu</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Jinming Hu</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Jinming Hu</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#experience"><span>Experience</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Machine Learning in Practice Crash Course</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 19, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="what-is-this-course-about">What is This Course About?</h2>
+<p>There are tons of good machine learning courses in the web. So why bother taking this course? The reason is that this course focuses on different parts from other courses. Specifically, this course is about the fundamental knowledge of machine learning; the insights of different algorithms; best practices in applications. On the other hand, we will not pay much attention to the theoretical part of machine learning; instead, we provide some resources such as links to other courses or chapters of textbooks for interested readers.</p>
+<h2 id="textbook">Textbook</h2>
+<p>There are books for interested readers.</p>
+<ol>
+<li><strong>[PC]</strong> <em>Pattern Classification (2nd Edition)</em>, by Richard O. Duda, Peter E. Hart, and David G. Stork, Wiley-Interscience, 2000.</li>
+<li><strong>[PRML]</strong>  <em>Pattern Recognition and Machine Learning</em>, by Christopher M. Bishop, Springer 2006.</li>
+<li>[<strong>ESLII</strong>] <em>The Elements of Statistical Learning: Data Mining, Inference, and Prediction (2nd ed.)</em>, by T. Hastie, R. Tibshirani &amp; J. Friedman, Springer 2009.</li>
+<li>[<strong>MLAPP</strong>] <em>Machine Learning: A Probabilistic Perspective</em>, by Kevin Murphy, The MIT Press, 2012.</li>
+<li>[<strong>DM</strong>] <em>Data mining: concepts and techniques</em>, by Jiawei Han, Jian Pei, and Micheline Kamber. Elsevier, 2011.</li>
+<li>[<strong>DL</strong>]<em>Deep learning</em>, by Goodfellow Ian, Yoshua Bengio, and Aaron Courville. MIT press, 2016.</li>
+<li>Supplementary readings will be available online.</li>
+</ol>
+<h2 id="schedule">Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Time</th>
+<th>Topic</th>
+<th>Video</th>
+<th>Reading</th>
+<th>Lecturer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>5/4 Mon.</td>
+<td>Course Overview &amp; Introduction</td>
+<td>
+<a href="https://www.bilibili.com/video/BV1fA411i7k8/" target="_blank" rel="noopener">Lec1</a></td>
+<td>[PC] 1; [ESL] 1&amp;2; [PRML] 1</td>
+<td>Conan Hu</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5/10 Sun.</td>
+<td>ML Problem Reframing &amp; Generalization &amp; Metrics</td>
+<td>
+<a href="https://www.bilibili.com/video/BV1rt4y117F3/" target="_blank" rel="noopener">Lec2</a></td>
+<td>
+<a href="https://developers.google.com/machine-learning/problem-framing" target="_blank" rel="noopener">Google Course</a></td>
+<td>Conan Hu</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5/24 Sun.</td>
+<td>Bayesian Decision Rule</td>
+<td>
+<a href="https://www.bilibili.com/video/BV1Rg4y1B7X8/" target="_blank" rel="noopener">Lec3</a></td>
+<td>
+<a href="https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf" target="_blank" rel="noopener">Domingos&rsquo;s excellent paper</a>; [PC] 2</td>
+<td>Conan Hu</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5/31 Sun.</td>
+<td>Naive Bayes &amp; Linear Regression Methods</td>
+<td>None</td>
+<td>[PC] 3</td>
+<td>Conan Hu</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6/21 Sun.</td>
+<td>Bias-Variance &amp; Overfitting</td>
+<td>
+<a href="https://www.bilibili.com/video/BV1ez4y1Q7VR/" target="_blank" rel="noopener">Lec5</a></td>
+<td>[ESL] 4.5.1, 12; [PRML] 4.1.7, 7</td>
+<td>Conan Hu</td>
+</tr>
+<tr>
+<td>6</td>
+<td>9/11 Sun.</td>
+<td>Linear Classification Methods</td>
+<td>
+<a href="https://www.bilibili.com/video/BV1154y1C7C5/" target="_blank" rel="noopener">Lec6</a></td>
+<td>[ESL] 4.5.1, 12; [PRML] 4.1.7, 7</td>
+<td>Conan Hu</td>
+</tr>
+<tr>
+<td>7</td>
+<td>11/22 Sun.</td>
+<td>kNN &amp; Decision Tree</td>
+<td>
+<a href="https://www.bilibili.com/video/BV1kD4y1Q7kF/" target="_blank" rel="noopener">Lec7</a></td>
+<td>[PC] 5.1~5.5</td>
+<td>Conan Hu</td>
+</tr>
+<tr>
+<td>8</td>
+<td>12/13 Sun.</td>
+<td>Ensemble Methods: Bagging &amp; Boosting</td>
+<td>
+<a href="https://www.bilibili.com/video/BV1zh411Z7xa/" target="_blank" rel="noopener">Lec8</a></td>
+<td></td>
+<td>Conan Hu</td>
+</tr>
+<tr>
+<td>9</td>
+<td>TBD</td>
+<td>Ensemble Methods: GBDT &amp; XGBoost</td>
+<td></td>
+<td></td>
+<td>Conan Hu</td>
+</tr>
+<tr>
+<td>10</td>
+<td>TBD</td>
+<td>Neural Networks &amp; Deep Learning</td>
+<td></td>
+<td>
+<a href="cs231n.stanford.edu">CS231N</a></td>
+<td>Conan Hu</td>
+</tr>
+<tr>
+<td>11</td>
+<td>TBD</td>
+<td>Clustering &amp; Dimension Reduction &amp; Visualization</td>
+<td></td>
+<td></td>
+<td>Conan Hu</td>
+</tr>
+<tr>
+<td>12</td>
+<td>TBD</td>
+<td>Frequent Pattern &amp; ML in Practice</td>
+<td></td>
+<td></td>
+<td>Conan Hu</td>
+</tr>
+<tr>
+<td>13</td>
+<td>TBD</td>
+<td>ML in Practice: Tools &amp; Data &amp; Feature Engineering</td>
+<td></td>
+<td>
+<a href="https://developers.google.com/machine-learning/data-prep" target="_blank" rel="noopener">Google Course</a>  
+<a href="http://cs229.stanford.edu/materials/ML-advice.pdf" target="_blank" rel="noopener">ML Advice</a></td>
+<td>Conan Hu</td>
+</tr>
+</tbody>
+</table>
+<h2 id="where-to-go">Where to Go?</h2>
+<p>Here we list some recommended courses for deeply learning. Remember, if you want to gain a deep understanding, you should finish the assignments.</p>
+<p>
+<a href="https://www.coursera.org/learn/machine-learning" target="_blank" rel="noopener">Coursera Machine Learning</a>: An introductory given by Andrew NG. We suggest starting from here.</p>
+<p>Pick one from the following two:</p>
+<ol>
+<li>
+<a href="http://cs229.stanford.edu/" target="_blank" rel="noopener">Stanford CS229 Machine Learing</a>: There are videos in Youtube and 
+<a href="https://www.bilibili.com/video/BV16J411t71N?from=search&amp;seid=14263588844851175178" target="_blank" rel="noopener">Bilibili (2018 version)</a>.</li>
+<li>
+<a href="http://www.cs.cmu.edu/~mgormley/courses/10701-f16/schedule.html" target="_blank" rel="noopener">CMU 10-701 Intro to ML</a>：There are videos in Youtube (2016 version).</li>
+</ol>
+<p>As the homework of the above three courses either based on MATLAB or do not cover much in coding part. Here we suggest the assignments of 
+<a href="http://dengcai.zjulearning.org.cn/Courses/ml/" target="_blank" rel="noopener">our course in Zhejiang University</a>.</p>
+<p>For the most popular deep learning, I recommend the following courses:</p>
+<p>
+<a href="http://cs231n.github.io/" target="_blank" rel="noopener">Stanford CS231n</a>：Deep learning for CV. We suggest starting from here for deep learning.</p>
+<p>
+<a href="http://web.stanford.edu/class/cs224n/" target="_blank" rel="noopener">Stanford CS224n</a>：Deep learning for NLP.</p>
+<p>
+<a href="http://rll.berkeley.edu/deeprlcourse/" target="_blank" rel="noopener">Berkeley CS285</a>：Deep Reinforcement Learning.</p>
+<h2 id="last-word">Last Word</h2>
+<p>Welcome to give us any feedback or suggestion. We are eager to hear any of them. Also, welcome to suggest topics that you would like us to cover!</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://conanhujinming.github.io/post/ml_in_practice_crash_course/&amp;text=Machine%20Learning%20in%20Practice%20Crash%20Course" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://conanhujinming.github.io/post/ml_in_practice_crash_course/&amp;t=Machine%20Learning%20in%20Practice%20Crash%20Course" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Machine%20Learning%20in%20Practice%20Crash%20Course&amp;body=https://conanhujinming.github.io/post/ml_in_practice_crash_course/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://conanhujinming.github.io/post/ml_in_practice_crash_course/&amp;title=Machine%20Learning%20in%20Practice%20Crash%20Course" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Machine%20Learning%20in%20Practice%20Crash%20Course%20https://conanhujinming.github.io/post/ml_in_practice_crash_course/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://conanhujinming.github.io/post/ml_in_practice_crash_course/&amp;title=Machine%20Learning%20in%20Practice%20Crash%20Course" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hubd2169f75411e26c6f08e041cf104953_98411_270x270_fill_q90_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://conanhujinming.github.io/">Jinming Hu</a></h5>
+      <h6 class="card-subtitle">Software Engineer</h6>
+      <p class="card-text">My research interests include machine learning, data mining, deep learning, computer vision, operating system, and database.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:jinminghu233@qq.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/conanhujinming" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.a8d7005002cb4a052fd6d721e83df9ba.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
