@@ -3,8 +3,10 @@ layout: page
 title: About
 permalink: /about/
 ---
-## About
-&nbsp;&nbsp;I graduated from School of Microelectronics, Fudan University as a Bachelor in June, 2020 and currently am a third-year graduate student advised by Professor [Fan Yang](http://homepage.fudan.edu.cn/yangfan/). I am an incoming senior software engineer in Hisilicon. I am interested in Digital IC Verification, EDA R&D and Architecture Modeling for complex ICs.
+## Education
+<p>I got a bachelor degree from School of Microelectronics, Fudan University.At present,I am a third-year graduate student advised by Professor [Fan Yang](https://sme.fudan.edu.cn/60/64/c31157a352356/page.htm).</p> 
+
+<p>I will join Hisilicon as a senior software engineer. I am interested in Digital IC Verification, compiler, EDA R&D and Architecture Modeling for complex ICs.</p>
    
 ## Contact
    Email: yyang16@126.com
