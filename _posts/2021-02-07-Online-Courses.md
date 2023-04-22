@@ -5,7 +5,7 @@ date: 2021-02-07 18:25:30 +0800
 category: Resources
 ---
 ## Computer Science<br>
-These are some resources that I have picked from the Internet so far. <br>
+
 - Introduction to System<br>
     - [Introduction to Computer Systems, Seth Copen Goldstein, CMU](https://www.cs.cmu.edu/~213/index.html)
 - Operating System<br>
@@ -33,3 +33,15 @@ These are some resources that I have picked from the Internet so far. <br>
     - [Formal Methods: Specification, Verification, and Synthesis, Sanjit A. Seshia, UCB](https://people.eecs.berkeley.edu/~sseshia/219c/)
     - [Introduction to Logic Synthesis, Adnan Aziz, UT Austin](http://users.ece.utexas.edu/~adnan/syn-07/)
     - [Optimization, Modeling, and Simulation for VLSI CAD, Charlie Chen, UW-Madison](http://homepages.cae.wisc.edu/~ece902/index.html)
+
+## Math<br>
+
+- Numerical Computation
+   -[Linear Algebra, MIT](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)
+   -[Introduction to Numerical Analysis, MIT](https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2012/)
+   -[Introduction to Numerical Methods, MIT](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/)
+   -[Distributed Algorithms, MIT](https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/)
+
+- Descrete Math
+   -[Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/)
+   
