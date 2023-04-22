@@ -18,20 +18,20 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ejjoo
-author: Euijong Joo
-tagline: A blog about software engineering.
-email: ejjoo7994@gmail.com
+title: Cangye Ma
+author: cangye-ma
+tagline: A blog about Cangye Ma's experience and study.
+email: cangyema@126.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Euijong Joo | Blog.
+  Cangya Ma | Blog.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://ejjoo.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://cangye-ma.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 default: 
   scope:
     path: "public/images"
   values:
     image: true
-github_username: ejjoo
+github_username: cangye-ma
 highlighter: rouge
 svg:
   optimize: true
