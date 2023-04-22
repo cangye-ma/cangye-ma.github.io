@@ -36,12 +36,12 @@ category: Resources
 
 ## Math<br>
 
-- Numerical Computation
-   -[Linear Algebra, MIT](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)
-   -[Introduction to Numerical Analysis, MIT](https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2012/)
-   -[Introduction to Numerical Methods, MIT](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/)
-   -[Distributed Algorithms, MIT](https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/)
+- Numerical Computation<br>
+    - [Linear Algebra, MIT](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)
+    - [Introduction to Numerical Analysis, MIT](https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2012/)
+    - [Introduction to Numerical Methods, MIT](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/)
+    - [Distributed Algorithms, MIT](https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/)
 
-- Descrete Math
-   -[Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/)
+- Descrete Math<br>
+    - [Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/)
    
