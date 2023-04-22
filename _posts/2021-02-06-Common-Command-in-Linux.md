@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ubuntu(Linux)常用的命令
+title: Common Command in Linux
 date: 2021-02-06 20:20:30 +0800
 category: Linux
 ---
