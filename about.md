@@ -10,7 +10,6 @@ I will join Hisilicon as a senior software engineer. I am interested in below ar
 * Digital IC Verification(Simulation, Emulation, Prototype and Fomality)
 * EDA R&D(Digital Frontend)
 * Architecture Modeling for complex ICs
-* Compiler | HPC | Cloud | Database for EDA
    
 ## Contact
    Email: cangyema@126.com
