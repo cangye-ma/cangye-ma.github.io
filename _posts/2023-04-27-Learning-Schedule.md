@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Learing Schedule
+title: Learning Schedule
 date: 2023-04-27 14:45:30 +0800
 category: Schedule
 ---
@@ -17,3 +17,7 @@ category: Schedule
 - Finish Leetcode 500
 # Optimal Methods<br>
 - To do...
+
+## Schedule in Apr., 2023
+- Read Chapter 1 to Chapter 5, **compilerbook**<br>
+- Finish the top 100 in Leetcode
