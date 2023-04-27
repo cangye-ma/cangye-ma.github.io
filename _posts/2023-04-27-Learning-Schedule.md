@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Learning Schedule
-date: 2023-04-27 14:45:30 +0800
+date: 2023-04-27 12:45:30 +0800
 category: Schedule
 ---
 ## Annual Schedule<br>
