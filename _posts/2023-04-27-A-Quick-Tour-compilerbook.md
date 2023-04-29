@@ -16,6 +16,13 @@ category: Compiler
     </script>
 </head>
 
+<style>
+img{
+    width: 60%;
+    padding-left: 20%;
+}
+</style>
+
 ## 编译器工具链<br>
 一个典型的编译器工具链如下所示。
 ![编译器工具链](/public/images/compiler_toolchain.png)
@@ -78,7 +85,20 @@ id:height = ( id:width + int:56 ) * id:factor ( id:foo ) ;
 
 大多数优化处理的是中间表示。编译优化包含死码消除、组合公共表达式和代码简化等，减少资源的消耗，提高运行效率。
 
-最后，中间表示必须转化成想要的汇编代码。
+最后，中间表示必须转化成想要的汇编代码。下面是上述中间表示在X86指令集下面的一个汇编指令序列。
+
+|汇编代码示例|
+|---|
+|MOVQ   width,  %rax|
+|ADDQ   $56,    %rax|
+|MOVQ   %rax,   -8(%rbp)|
+|MOVQ   foo,    %edi|
+|CALL   factor      |
+|MOVQ   -8(%rbp),   %rbx|
+|IMULQ  %rbx        |
+|MOVQ   %rax,   height|
+
+优秀的编译器是高度模块化的，因此相同的代码可以共享和按需组合。编译器可以提供不同的扫描器和解析器来支持不同的编程语言，输出相同的中间表示。不同的优化技术可以实现为独立的模块（每个模块读写相同的中间表示），以便使能和禁止。通过包含不同的代码生成器，编译器可以实现重定向，使得相同的中间表示可以发射到不同的微处理器上。
 
 
 
