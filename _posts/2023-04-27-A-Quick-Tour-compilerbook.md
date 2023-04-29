@@ -18,8 +18,7 @@ category: Compiler
 
 <style>
 img{
-    width: 60%;
-    padding-left: 20%;
+    width: 80%;
 }
 </style>
 
