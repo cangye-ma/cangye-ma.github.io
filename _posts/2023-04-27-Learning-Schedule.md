@@ -1,27 +1,27 @@
 ---
 layout: post
 title: Learning Schedule
-date: 2023-04-30 23:59:59 +0800
+date: 2023-12-31 23:59:59 +0800
 category: Schedule
 ---
-## Annual Schedule<br>
+# Annual Schedule<br>
 
-# Compiler<br>
+## Compiler<br>
 - Know the basic knowledge of a compiler<br>
 - Implement a small compiler<br>
 
-# Computer Organization and Architecture<br>
+## Computer Organization and Architecture<br>
 - Familar with the organization and architecture of computer<br>
 - Know the organization and architecture of GPU<br>
 
-# Data Structure and Algorithm<br>
+## Data Structure and Algorithm<br>
 - Familar with Leetcode Hot 100<br>
 - Familar with main data structures<br>
 - Finish Leetcode 500<br>
 
-# Optimal Methods<br>
+## Optimal Methods<br>
 - To do...<br>
 
 ## Schedule in Apr., 2023
-- Read Chapter 1 to Chapter 5, **compilerbook**<br>
+- Read Chapter 1 to Chapter 5, _compilerbook_<br>
 - Finish the top 100 in Leetcode<br>
