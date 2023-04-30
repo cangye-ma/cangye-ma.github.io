@@ -24,6 +24,7 @@ I will join Hisilicon as a senior software engineer. I am interested in below ar
 * Circuit Analysis, Undergraduate
 * Design of Digital IC, Undergraduate
 * Design of Analog IC, Undergradute
+* Computer Architecture, Undergraduate
 * Design and Development of Software, Undergradute
 * Digital Siginal Process, Undergraduate
 * Discrete Mathematics and Optimal Methods, Graduate
