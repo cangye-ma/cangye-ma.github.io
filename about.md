@@ -7,10 +7,14 @@ permalink: /about/
 I got a bachelor degree from School of Microelectronics, Fudan University.At present,I am a third-year graduate student pursuing the M.S. degree in Integrated Circuit and System Design. 
 
 I will join Hisilicon as a senior software engineer. I am interested in below areas.
-* Digital IC Verification(Simulation, Emulation, Prototype and Fomality)
+* Digital IC Verification
+   - Simulation
+   - Emulation 
+   - Prototype 
+   - Fomality
 * Software Development in IC
    - Design Automation(Digital Frontend)
-   - Fundamental Software(Driver/Compiler/OS)
+   - System Software
    - Architecture Modeling
    
 ## Contact
