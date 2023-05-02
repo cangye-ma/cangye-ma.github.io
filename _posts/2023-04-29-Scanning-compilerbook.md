@@ -16,6 +16,14 @@ category: Compiler
     </script>
 </head>
 
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.0.2/+esm';
+mermaid.initialize({ startOnLoad: false });
+await mermaid.run({
+  querySelector: '.language-mermaid',
+});
+</script>
+
 ## 词法单元的种类
 扫描指的是从程序的原生文本源码中识别出词法单元的过程，需要编程语言设计者讲清楚精密的细节——哪些是允许的，哪些是不允许的。大多数语言的词法单元包含以下系列：
 - 关键字
