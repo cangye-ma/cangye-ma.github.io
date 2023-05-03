@@ -226,7 +226,7 @@ flowchart LR
 |将$D_0$加入至列表|
 |While 列表中包含DFA状态|
 |$\quad$设d为下一个从列表中去除的DFA状态|
-|$\quad$ For$\Sigma$中的每个字符|
+|$\quad$ For $\Sigma$ 中的每个字符|
 |$\quad\quad$ 让T包含所有的NFA状态$N_k$,这些状态满足$N_j \in d$并且$N_j \stackrel{c}{\rightarrow} N_k$|
 |$\quad\quad$ 构造新的DFA状态$D_i$ = $\epsilon$ - closure($T$)|
 |$\quad\quad$ 如果$D_i$不在列表中，将其添加到列表尾部。|
