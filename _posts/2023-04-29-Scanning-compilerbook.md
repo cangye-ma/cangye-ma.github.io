@@ -201,5 +201,36 @@ flowchart LR
     D[3] -- $\epsilon$ --> A((0))
 ```
 
+a(cat\|cow)*的NFA如下所示：
+```mermaid
+flowchart LR
+    A((0)) -- a --> B((1)) -- $\epsilon$ --> C((2)) -- $\epsilon$ --> D((3)) -- $\epsilon$ --> E((4)) -- c --> F((5)) -- o --> G((6)) -- w --> H((7)) -- $\epsilon$ --> I((8)) -- $\epsilon$ --> J[9]
+    D((3)) -- $\epsilon$ --> K((10)) -- c --> L((11)) -- a --> M((12)) -- t --> N((13)) -- $\epsilon$ --> I((8))
+    C((2)) -- $\epsilon$ --> J[9]
+    J[9] -- $\epsilon$ --> C((2))
+```
+
+表示完整语言词法单元的NFA可能拥有上千个状态，难以实现。一般通过将NFA转换成等价的DFA来处理。
+
+### 将NFA转换成DFA
+
+我们可以使用子集构造将NFA转化成等价的DFA，其基本思想是构造这样一个DFA，其中DFA中的一个状态对应NFA中的多个状态。考虑一个由状态集N和初始状态$N_0$构成的NFA，我们想将其转化成由状态集D和初始状态$D_0$构成的DFA。每个D状态对应多个N状态。
+
+首先定义辅助函数$\epsilon$闭包$\epsilon$ - closure(n),其指的是NFA状态n通过0次或者多次$\epsilon$传输。子集构造算法如下所示：
+
+|子集构造算法|
+|---|
+|输入：给定由状态集N和初始状态$N_0$构成的NFA，字母表$\Sigma$|
+|输出：由状态集D和初始状态$D_0$构成的DFA|
+|构建初始态$D_0$ = $\epsilon$ - closure($N_0$)|
+|将$D_0$加入至列表|
+|While 列表中包含DFA状态|
+|$\quad$设d为下一个从列表中去除的DFA状态|
+|$\quad$ For$\Sigma$中的每个字符|
+|$\quad\quad$ 让T包含所有的NFA状态$N_k$,这些状态满足$N_j \in d$并且$N_j \stackrel{c}{\rightarrow} N_k$|
+|$\quad\quad$ 构造新的DFA状态$D_i$ = $\epsilon$ - closure($T$)|
+|$\quad\quad$ 如果$D_i$不在列表中，将其添加到列表尾部。|
+
+
 
 
