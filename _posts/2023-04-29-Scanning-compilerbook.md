@@ -162,4 +162,12 @@ flowchart LR
 
 ## 转换算法
 
+如下是正则表达式、NFA和DFA的关系。
+![正则表达式、NFA和DFA的关系](/public/images/re_nfa_dfa.png)
+
+### 将正则表达式转换成NFA
+
+
+
+
 
