@@ -166,8 +166,40 @@ flowchart LR
 ![正则表达式、NFA和DFA的关系](/public/images/re_nfa_dfa.png)
 
 ### 将正则表达式转换成NFA
+首先，我们定义与正则表达式基础条件对应的自动机。
 
+任意字符a的NFA如下所示：
+```mermaid
+flowchart LR
+    A((0)) -- a --> B[1]
+```
 
+任意$\epsilon$传输的NFA如下所示：
+```mermaid
+flowchart LR
+    A((0)) -- $\epsilon$ --> B[1]
+```
+
+现在假设我们已经为正则表达式A和正则表达式B构造了NFA，其中A和B都只包含一个初始态和一个接收态。那么AB的NFA如下所示：
+```mermaid
+flowchart LR
+    A((0)) -- A --> B((1)) -- $\epsilon$ --> C((2)) -- B --> D[3]
+```
+
+A\|B的NFA如下所示：
+```mermaid
+flowchart LR
+    A((0)) -- $\epsilon$ --> B((1)) -- A --> C((2)) -- $\epsilon$ --> D[3]
+    A((0)) -- $\epsilon$ --> E((4)) -- B --> F((5)) -- $\epsilon$ --> D[3]    
+```
+
+Kleene闭包A*的NFA如下所示：
+```mermaid
+flowchart LR
+    A((0)) -- $\epsilon$ --> B((1)) -- A --> C((2)) -- $\epsilon$ --> D[3]
+    A((0)) -- $\epsilon$ --> D[3]
+    D[3] -- $\epsilon$ --> A((0))
+```
 
 
 
