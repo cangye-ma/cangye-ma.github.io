@@ -231,6 +231,26 @@ flowchart LR
 |$\quad\quad$ 构造新的DFA状态$D_i$ = $\epsilon$ - closure($T$)|
 |$\quad\quad$ 如果$D_i$不在列表中，将其添加到列表尾部。|
 
+### 最小化DFA
+子集构造算法可以帮助我们得到有效的DFA。但与此同时，得到的DFA中可能包含大量的状态，需要一个很大的传输矩阵来表示，可能影响访存性能。为了解决这个问题，我们可以采用Hopcroft算法来缩小DFA。下面是DFA算法。
+
+|DFA最小化算法|
+|---|
+|输入： 由状态集S组成的DFA|
+|输出： 由状态集T组成的等价DFA，其中T的状态数不超过S|
+|首先将S切分为$T_0$和$T_1$，其中$T_0$表示S的非接收态，$T_1$表示S的接收态|
+|重复：|
+|$\quad$ $\forall T_i \in T$ :|
+|$\quad\quad$ $\forall c \in \Sigma$ :|
+|$\quad\quad\quad$ if $T_i \stackrel{c}{\rightarrow}$ {超过一个T中的状态}|
+|$\quad\quad\quad$ then 将$T_i$切分成多个状态，满足每个状态接收c进入不超过1个状态|
+|直到没有状态可以切分|
+
+## 有限自动机的限制
+有限自动机识别词法单元的复杂度为指数复杂度，不够高效。
+
+## 使用扫描器生成器
+
 
 
 
