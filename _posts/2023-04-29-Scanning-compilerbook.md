@@ -250,7 +250,7 @@ flowchart LR
 有限自动机识别词法单元的复杂度为指数复杂度，不够高效。
 
 ## 使用扫描器生成器
-正则表达式精准地描述了词法单元所允许的所有形式，我们可以使用一个程序来将一系列正砸表达式转换成扫描器代码。这个程序也称作扫描器生成器。Flex是一种基于C语言实现的扫描器，遵从Berkeley License, 如今广泛用于类Unix系统得到C/C++实现的扫描器。使用Flex，我们需要写出扫描器的规格，其中包含正则表达式、C代码片段以及一些专业术语。Flex接收这个规格，输出可以正常编译的C代码。
+正则表达式精准地描述了词法单元所允许的所有形式，我们可以使用一个程序来将一系列正则表达式转换成扫描器代码。这个程序也称作扫描器生成器。Flex是一种基于C语言实现的扫描器，遵从Berkeley License， 如今广泛用于类Unix系统得到C/C++实现的扫描器。使用Flex，我们需要写出扫描器的规格，其中包含正则表达式、C代码片段以及一些专业术语。Flex接收这个规格，输出可以正常编译的C代码。
 
 ```
 %{
@@ -263,7 +263,68 @@ flowchart LR
     (Additional Code)
 ```
 
-如上是Flex文件的整体框架。其中第一部分包含放置在scanner.c开端的任意C代码，比如include文件、类型定义等，用于包含含有词法单元符号常量的文件。第二部分描述字符类，对常见的正则表达式是符号缩写。比如声明DIGIT [0-9]，这个类在后面以{DIGIT}引用。第三部分陈述了你想要匹配的词法单元的每种类型的正则表达式，伴随的是表达式匹配后就会执行的C代码段。第四部分是scanner尾部，通常是额外的辅助函数。
+如上是Flex文件的整体框架。其中第一部分包含放置在scanner.c开端的任意C代码，比如include文件、类型定义等，用于包含含有词法单元符号常量的文件。第二部分描述字符类，对常见的正则表达式是符号缩写。比如声明DIGIT [0-9]，这个类在后面以{DIGIT}引用。第三部分陈述了你想要匹配的词法单元的每种类型的正则表达式，伴随的是表达式匹配后就会执行的C代码段。第四部分是scanner尾部，通常是额外的辅助函数。Flex必须定义yywrap()函数，若文件结束时输入已经完成返回1，否则yywrap()函数将会打开下一个文件并返回0。
+
+FLEX接受的正则表达式语言与前面介绍的正则表达式语言类似。主要区别在于具有特殊含义的字符（如括号、方括号和星号）需要用反斜杠转义或者套上双引号；此外，（.）可用于匹配任意的字符，有助于捕捉错误条件。下面是一个简单的示例。
+
+```
+%{
+#include "token.h"
+%}
+DIGIT   [0-9]
+LETTER  [a-zA-Z]
+%%
+(" " | \t | \n) /* skip whitespace */
+\+          {   return TOKEN_ADD;  }
+while       {   return TOKEN_WHILE;}
+{LETTER}+   {   return TOKEN_IDENT;}
+{DIGIT}+    {   return TOKEN_NUMBER;}
+.           {   return TOKEN_ERROR;}
+%%
+int yywrap(){   return 1;}
+```
+
+FLEX生成扫描器代码，但并非完整的程序，因此需要写一个main函数。下面是一个基于上面例子的简单驱动程序。
+
+```
+#include "token.h"
+#include <stdio.h>
+
+extern  FILE    *yyin;
+extern  int     yylex();
+extern  char    *yytext;
+
+int main()
+{
+    yyin = fopen("program.c", "r");
+    if(!yyin)
+    {
+        printf("could not open program.c\n");
+        return 1;
+    }
+
+    while(1)
+    {
+        token_t t = yylex();
+        if (t == TOKEN_EOF) break;
+        printf(token: %d text: %s\n", t, yytext);
+    }
+}
+```
+
+上面是main.c文件的内容，下面是token.h文件的内容。
+
+```
+typedef enum
+{
+    TOKEN_EOF = 0,
+    TOKEN_WHILE,
+    TOKEN_ADD,
+    TOKEN_IDENT,
+    TOKEN_NUMBER,
+    TOKEN_ERROR
+} token_t;
+```
 
 
 
