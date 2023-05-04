@@ -312,7 +312,7 @@ int main()
 }
 ```
 
-上面是main.c文件的内容，下面是token.h文件的内容。
+上面是main.c文件的内容。首先，主程序必须将它将在生成的扫描代码里面使用的符号为extern，yyin是文本将会读取的文件，yylex是实现扫描器的函数，数组yytex包含每个词法单元发现的实际文本。程序中不同地方词法单元的类型必须有一致的定义，因此在token.h文件中列出了枚举新类型token_t，如下所示。
 
 ```
 typedef enum
@@ -325,6 +325,23 @@ typedef enum
     TOKEN_ERROR
 } token_t;
 ```
+
+如下是一个Flex程序的构造过程。
+
+```mermaid
+flowchart LR
+    A((scanner.flex)) --> B[Flex] --> B1((scanner.c)) --> C[Compiler] --> C1((scanner.o)) --> D[Linker] --> E((scanner.exe))
+    F((main.c)) --> G[Compiler] --> G1((main.o)) --> D[Linker]
+    H((token.h)) --> B1((scanner.c))
+    H((token.h)) --> F((main.c))
+```
+
+## 实际考虑
+### 处理关键字
+### 记录原来的位置
+### 清洗词法单元
+### 约束词法单元
+### 错误处理
 
 
 
