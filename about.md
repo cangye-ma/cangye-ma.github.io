@@ -31,10 +31,10 @@ I will join Hisilicon as a senior software engineer. I am interested in below ar
 * Computer Architecture, Undergraduate
 * Design and Development of Software, Undergradute
 * Convex Optimization, Undergraduate
-* Digital Siginal Process, Undergraduate
+* Digital Signal Process, Undergraduate
 * Discrete Mathematics and Optimal Methods, Graduate
 * Analysis of Advanced IC, Graduate
 * High-level Synthesis Techniques in Digital IC, Graduate
 * Parallel Computing, Graduate
-* Stastical Learning Theory and Application, Graduate
+* Statistical Learning Theory and Application, Graduate
 * Programmable Chip at System Level, Graduate
