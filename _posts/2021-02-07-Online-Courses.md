@@ -8,6 +8,7 @@ category: Resources
 
 - Introduction to System<br>
     - [Introduction to Computer Systems, Seth Copen Goldstein, CMU](https://www.cs.cmu.edu/~213/index.html)
+    - [Introduction to Computing Systems, USTC](http://acsa.ustc.edu.cn/ics/download.html)
 - Operating System<br>
     - [Operating Systems, Haibo Chen,SJTU](https://ipads.se.sjtu.edu.cn/courses/os/) 
     - [Operating Systems: Three Easy Pieces, Wisc](https://pages.cs.wisc.edu/~remzi/OSTEP/)
@@ -18,7 +19,8 @@ category: Resources
 - Computer Architecture<br>
     - [Great Ideas in Computer Architecture, UCB](https://cs61c.org/sp21/)
     - [Computer Architecture and Engineering, UCB](https://inst.eecs.berkeley.edu/~cs152/sp21/)
-    - [Hands-on Acceleration on Heterogeneous Computing Systems, Juan Gómez Luna, ETH](https://safari.ethz.ch/projects_and_seminars/fall2021/doku.php?id=heterogeneous_systems)
+    - [Digital Design and Computer Architecture, ETH](https://safari.ethz.ch/digitaltechnik/spring2023/doku.php?id=schedule)
+    - [Hands-on Acceleration on Heterogeneous Computing Systems, ETH](https://safari.ethz.ch/projects_and_seminars/fall2021/doku.php?id=heterogeneous_systems)
 - Computer Network<br>
     - [Computer Network, CMU](https://computer-networks.github.io/sp19/)
 - Compiler<br>
@@ -42,6 +44,6 @@ category: Resources
     - [Introduction to Numerical Methods, MIT](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/)
     - [Distributed Algorithms, MIT](https://ocw.mit.edu/courses/6-852j-distributed-algorithms-fall-2009/)
 
-- Descrete Math<br>
+- Descrete Mathematics<br>
     - [Mathematics for Computer Science](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/)
    
