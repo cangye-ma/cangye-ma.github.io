@@ -4,13 +4,10 @@ title: About
 permalink: /about/
 ---
 ## About
-I got a B.Eng. degree from School of Microelectronics, Fudan University.At present,I am a third-year graduate student pursuing the M.Sci. degree in Integrated Circuit and System Design. 
-
-I will join Hisilicon as a senior software engineer. I am interested in below areas.
+I got a B.Eng. degree and a M.Sci. degree from School of Microelectronics, Fudan University. Currently I am a software engineer in Hisilicon. I am interested in below areas.
 * Digital IC Verification Method
    - Simulation
    - Emulation 
-   - Prototype 
    - Fomality
 * Software Development in IC
    - Design Automation(Digital Frontend)

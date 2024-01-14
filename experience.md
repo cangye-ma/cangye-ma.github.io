@@ -4,13 +4,16 @@ title: Experience
 permalink: /experience/
 ---
 ## Selected Honors
-- Outstanding Graduate Candidate in Fudan University
+- Outstanding Graduate in Fudan University
 - Outstanding Student Leader in Fudan University
 - Outstanding Student in Fudan University
 - Huawei Scholarship for Students in Fudan University
 - First Prize in  EDA Elite Challenge
 - Second Prize in National IC Contest(EDA track)
 - First Prize in Shanghai EDA Development and Application Contest
+
+## Work Experience
+- 2023.07~, Software Engineer, Hisilicon
 
 ## Intern Experience
 - 2022.07~2022.08, Software Engineer, Ali Cloud
